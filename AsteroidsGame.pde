@@ -26,7 +26,7 @@ public void keyPressed(){
   if(key == 'w'){
     press = true;
     fly.move();
-    fly.accelerate(5.0);
+    fly.accelerate(2.5);
   }
   if(key == 'd'){
     fly.turn(15);
