@@ -1,13 +1,15 @@
-//your variable declarations here
 Star[]solvent = new Star[200];
 Spaceship fly = new Spaceship();
 boolean press = false;
+ArrayList <Asteroid> petals = new ArrayList <Asteroid>();
 
 public void setup () 
 {
   size(800,800);
   for(int i = 0; i < solvent.length; i++)
     solvent[i] = new Star();
+  for(int i = 0; i < 10; i++)
+    petals.add(new Asteroid());
 }
 
 public void draw() 
@@ -17,9 +19,13 @@ public void draw()
     solvent[i].show();
   fill(255);
   fly.show();
-  if(press == true){
+  if (press == true){
     fly.move();
-    }
+  }
+  for(int i = 0; i < petals.size(); i++){
+    petals.get(i).show();
+    petals.get(i).move();
+  }
 }
 
 public void keyPressed(){
