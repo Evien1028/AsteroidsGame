@@ -25,7 +25,9 @@ public void draw()
   for(int i = 0; i < petals.size(); i++){
     petals.get(i).show();
     petals.get(i).move();
-  }
+    if(dist((float)petals.get(i).getX(), (float)petals.get(i).getY(), (float)fly.getX(), (float)fly.getY())<10)
+      petals.remove(i);
+  }  
 }
 
 public void keyPressed(){
